@@ -18,7 +18,7 @@ func buildInstallCommand(m *fabric.Mixin) *cobra.Command {
 			return nil
 		},
 		RunE: func(cmd *cobra.Command, args []string) error {
-			return m.Execute(cmd.Context())
+			return m.Install(cmd.Context())
 		},
 	}
 	return cmd

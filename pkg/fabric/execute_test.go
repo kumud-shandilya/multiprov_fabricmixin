@@ -41,7 +41,7 @@ func TestMixin_Execute(t *testing.T) {
 
 			m.In = bytes.NewBuffer(mixinInputB)
 
-			err = m.Execute(ctx)
+			err = m.Install(ctx)
 			require.NoError(t, err, "execute failed")
 
 			if tc.wantOutput == "" {
